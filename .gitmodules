@@ -1,0 +1,33 @@
+[submodule "mpfr"]
+	path = mpfr
+	url = https://github.com/dsrdakota/mpfr
+[submodule "gmp"]
+	path = gmp
+	url = https://github.com/dsrdakota/gmp
+[submodule "binutils"]
+	path = binutils
+	url = git://sourceware.org/git/binutils-gdb.git
+[submodule "newlib"]
+	path = newlib
+	url = git://sourceware.org/git/newlib-cygwin.git
+[submodule "cloog"]
+	path = cloog
+	url = https://repo.or.cz/cloog.git
+[submodule "isl"]
+	path = isl
+	url = https://repo.or.cz/isl.git
+[submodule "openscop"]
+	path = openscop
+	url = https://repo.or.cz/openscop.git
+[submodule "gcc"]
+	path = gcc
+	url = git://gcc.gnu.org/git/gcc.git
+[submodule "npth"]
+	path = npth
+	url = https://dev.gnupg.org/source/npth.git
+[submodule "make"]
+	path = make
+	url = https://git.savannah.gnu.org/git/make.git
+[submodule "bison"]
+	path = bison
+	url = https://git.savannah.gnu.org/git/bison.git
