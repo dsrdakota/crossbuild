@@ -31,3 +31,9 @@
 [submodule "bison"]
 	path = bison
 	url = https://git.savannah.gnu.org/git/bison.git
+[submodule "mpc"]
+	path = mpc
+	url = https://scm.gforge.inria.fr/anonscm/git/mpc/mpc.git
+[submodule "binutils-gdb"]
+	path = binutils-gdb
+	url = git://sourceware.org/git/binutils-gdb.git
