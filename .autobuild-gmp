@@ -1,0 +1,17 @@
+#!/bin/bash
+[[ -n "$HOST_TRIPLET" ]] && HOST_TRIPLET=$HOST_TRIPLET || HOST_TRIPLET=x86_64-w64-mingw32
+CC="$HOST_TRIPLET-gcc"
+CFLAGS="-std=gnu11 "
+CXX="$HOST_TRIPLET-g++"
+CXXFLAGS="-std=gnu++1z"
+LDFLAGS="-pg -Wl,--add-stdcall-alias,--enable-stdcall-fixup,--compat-implib,--nxcompat"
+LD=""
+NM="$HOST_TRIPLET-nm"
+CPP="$HOST_TRIPLET-cpp -x c -std=gnu11"
+CXXCPP="$HOST_TRIPLET-cpp -std=gnu++1z -x c++"
+CC_FOR_BUILD="$HOST_TRIPLET-gcc"
+CPP_FOR_BUILD="$HOST_TRIPLET-cpp"
+ABI="64"
+export HOST_TRIPLET CC CXX CXXCPP CPP LD NM CC_FOR_BUILD CPP_FOR_BUILD ABI CFLAGS CXXFLAGS LDFLAGS
+./configure --prefix=/home/dsrda --build=$HOST_TRIPLET --enable-cxx=yes --enable-assembly=yes --with-readline --enable-minithres=yes --enable-profiling=gprof --enable-fft=yes --enable-alloca=reentrant --enable-nails=no --with-sysroot=$HOME --with-gnu-ld=yes --enable-static=yes --enable-shared=no
+[[ $? -eq 0 ]] && make -j4 && make install

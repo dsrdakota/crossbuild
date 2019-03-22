@@ -1,0 +1,10 @@
+
+./configure --prefix=$HOME --target=x86_64-elf --enable-languages=c,c++ --without-headers --disable-threads --enable-gold --enable-ld \
+	--disable-nls --enable-interwork --enable-multilib --enable-lto \
+	--enable-linker-build-id --with-newlib --with-build-time-tools=$HOME/bin \
+	--disable-werror --disable-bootstrap --disable-libstdcxx \
+	--with-isl=$HOME --with-gmp=$HOME --with-mpfr=$HOME --without-mpc 
+
+	
+make -j4 all-gcc all-target-libgcc 
+make install-gcc install-target-libgcc
