@@ -37,3 +37,6 @@
 [submodule "binutils-gdb"]
 	path = binutils-gdb
 	url = git://sourceware.org/git/binutils-gdb.git
+[submodule "musl"]
+	path = musl
+	url = https://github.com/dsrdakota/musl.git
