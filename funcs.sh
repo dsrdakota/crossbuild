@@ -75,6 +75,7 @@ trap build_interrupted SIGINT
 
 
 function get_gmp_snapshot() {
+#	GMP6_URL="https://gmplib.org/download/snapshot/gmp-6.*.*-SNAPSHOT.tar.lz"
 	GMP_URL="https://gmplib.org/download/snapshot/gmp-6.*.*-SNAPSHOT.tar.lz"
 	SNAPSHOT=
 	[[ -n "$@" ]] && while "$1"; do
@@ -100,4 +101,17 @@ function get_gmp_snapshot() {
 	fi
 	GMP_URL=`echo $GMP_URL|sed -e 's/SNAPSHOT/$SNAPSHOT/'`
 	wget --spider $GMP_URL
+}
+
+function decompress_gmp_snapshot {
+	[[ ! -f "$1" ]] && echo "file not found or incorrect usage. usage: decompress_gmp_snapshot file" && return 1
+	tar -I zstd -xvf $1
+}
+
+function init_submodules {
+	git submodule update --init --recursive
+}
+
+function update_modules {
+	
 }

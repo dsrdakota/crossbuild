@@ -1,9 +1,7 @@
 [submodule "mpfr"]
 	path = mpfr
 	url = https://github.com/dsrdakota/mpfr
-[submodule "gmp"]
-	path = gmp
-	url = https://github.com/dsrdakota/gmp
+	
 [submodule "binutils"]
 	path = binutils
 	url = git://sourceware.org/git/binutils-gdb.git
@@ -39,4 +37,4 @@
 	url = git://sourceware.org/git/binutils-gdb.git
 [submodule "musl"]
 	path = musl
-	url = https://github.com/dsrdakota/musl.git
+	url = git://git.musl-libc.org/musl
